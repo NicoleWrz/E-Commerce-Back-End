@@ -58,9 +58,9 @@ router.put('/:id', async (req, res) => {
 
 router.delete('/:id', async (req, res) => {
   try {
-    const tagData = await Category.destory({
+    const tagData = await Tag.destory({
       where: {
-        id: res.params.id
+        id: req.params.id
       }
     });
     if (!tagData) {
